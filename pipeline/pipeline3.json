@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "FileServerReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -56,7 +57,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "fileName",
-								"value": ""
+								"value": {
+									"value": "@item().name",
+									"type": "Expression"
+								}
 							}
 						}
 					]
