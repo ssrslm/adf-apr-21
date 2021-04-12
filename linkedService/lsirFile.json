@@ -7,10 +7,10 @@
 		"typeProperties": {
 			"host": "c:\\ir",
 			"userId": "dsvmApr21\\atingupta2005",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlZTk2NGIwMC03Nzk5LTQ0M2ItOTUxYS04MjkyYzhjZTVlMjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4YWM5M2U2NC1lMGI4LTRhZDEtOTBlMy0zYmQ2M2FhZTUyZTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "irSelfHosted",
+			"referenceName": "selfHostedIR",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
