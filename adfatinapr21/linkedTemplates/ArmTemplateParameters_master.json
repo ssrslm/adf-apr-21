@@ -10,6 +10,12 @@
 		},
 		"lsStorage_connectionString": {
 			"value": ""
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
 		}
 	}
 }
