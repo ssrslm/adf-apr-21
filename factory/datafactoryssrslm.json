@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryssrslm",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dc1cf964-776b-40c1-bd7f-4c840cba19ad",
+		"tenantId": "f66b6bd3-ebc2-4f54-8769-d22858de97c5"
+	}
+}
