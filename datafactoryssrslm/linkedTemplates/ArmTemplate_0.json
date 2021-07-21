@@ -170,7 +170,6 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "*.csv",
 						"fileSystem": "firstcontainer"
 					},
 					"columnDelimiter": ",",
@@ -227,6 +226,8 @@
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
+									"wildcardFolderPath": "*",
+									"wildcardFileName": "*.csv",
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -251,7 +252,9 @@
 							{
 								"referenceName": "DelimitedText1",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"filename": "cars.csv"
+								}
 							}
 						],
 						"outputs": [
