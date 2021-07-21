@@ -1,7 +1,7 @@
 {
 	"name": "autouploadfiletrigger",
 	"properties": {
-		"description": "some test description",
+		"description": "some test description 12123",
 		"annotations": [],
 		"runtimeState": "Started",
 		"pipelines": [
