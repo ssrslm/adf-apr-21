@@ -1,0 +1,45 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafactoryssrslm"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/autouploadfiletrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "some test description",
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pipeline1",
+							"type": "PipelineReference"
+						}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/firstcontainer/blobs/",
+					"blobPathEndsWith": ".csv",
+					"ignoreEmptyBlobs": true,
+					"scope": "/subscriptions/0c3d520e-e92c-45a7-80e4-e32c80cffe5b/resourceGroups/rgTest/providers/Microsoft.Storage/storageAccounts/datalakessrslm",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
