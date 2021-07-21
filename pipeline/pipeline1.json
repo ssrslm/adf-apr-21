@@ -43,7 +43,10 @@
 				"inputs": [
 					{
 						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "cars.csv"
+						}
 					}
 				],
 				"outputs": [
