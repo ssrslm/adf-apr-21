@@ -27,6 +27,10 @@
 			"type": "string",
 			"defaultValue": "https://datalakessrslm.dfs.core.windows.net"
 		},
+		"autouploadfiletrigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0c3d520e-e92c-45a7-80e4-e32c80cffe5b/resourceGroups/rgTest/providers/Microsoft.Storage/storageAccounts/datalakessrslm"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -68,6 +72,9 @@
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"autouploadfiletrigger_properties_typeProperties_scope": {
+						"value": "[parameters('autouploadfiletrigger_properties_typeProperties_scope')]"
 					}
 				}
 			},

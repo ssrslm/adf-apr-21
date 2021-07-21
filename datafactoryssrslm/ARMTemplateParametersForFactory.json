@@ -19,6 +19,9 @@
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://datalakessrslm.dfs.core.windows.net"
+		},
+		"autouploadfiletrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/0c3d520e-e92c-45a7-80e4-e32c80cffe5b/resourceGroups/rgTest/providers/Microsoft.Storage/storageAccounts/datalakessrslm"
 		}
 	}
 }

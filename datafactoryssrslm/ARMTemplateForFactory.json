@@ -26,6 +26,10 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://datalakessrslm.dfs.core.windows.net"
+		},
+		"autouploadfiletrigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0c3d520e-e92c-45a7-80e4-e32c80cffe5b/resourceGroups/rgTest/providers/Microsoft.Storage/storageAccounts/datalakessrslm"
 		}
 	},
 	"variables": {
@@ -252,12 +256,12 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/customtrigger')]",
+			"name": "[concat(parameters('factoryName'), '/autouploadfiletrigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -267,14 +271,15 @@
 						"parameters": {}
 					}
 				],
-				"type": "ScheduleTrigger",
+				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"recurrence": {
-						"frequency": "Minute",
-						"interval": 1,
-						"startTime": "2021-07-21T14:31:00Z",
-						"timeZone": "UTC"
-					}
+					"blobPathBeginsWith": "/firstcontainer/blobs/",
+					"blobPathEndsWith": ".csv",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('autouploadfiletrigger_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
 				}
 			},
 			"dependsOn": [
