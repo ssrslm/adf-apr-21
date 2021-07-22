@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data2",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -18,8 +18,9 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
+							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -27,7 +28,9 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -41,13 +44,16 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "inputCSV",
-						"type": "DatasetReference"
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "cars.csv"
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "outTable",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]

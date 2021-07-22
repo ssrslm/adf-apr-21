@@ -1,0 +1,9 @@
+{
+	"name": "ssrslmdatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ba515d3f-d176-4c32-9b9b-b04c5e61ffa5",
+		"tenantId": "f66b6bd3-ebc2-4f54-8769-d22858de97c5"
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"name": "autouploadfiletrigger",
+	"properties": {
+		"description": "some test description 12123",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/firstcontainer/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/0c3d520e-e92c-45a7-80e4-e32c80cffe5b/resourceGroups/rgTest/providers/Microsoft.Storage/storageAccounts/datalakessrslm",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
