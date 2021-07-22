@@ -1,0 +1,17 @@
+{
+	"name": "ssrslmFileServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\TestDataFactory",
+			"userId": "ssrslm",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1MWUwZWNiZi1kYjY3LTRiZmMtOTllZi1jZTQzZTcwNWIzMzYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhostedIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
