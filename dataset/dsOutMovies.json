@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "output"
+				"fileName": "moviesoutput.csv",
+				"container": "firstcontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
