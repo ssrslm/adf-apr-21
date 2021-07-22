@@ -59,6 +59,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"filename": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
